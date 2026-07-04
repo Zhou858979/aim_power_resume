@@ -1,5 +1,8 @@
 # aim_power_resume
 关于klipper的断电续打项目
+
+Prebuilt `.so` binaries for ARM64 + Python 3.10.
+
 ## 下载与安装
 ```
 cd ~
@@ -7,6 +10,7 @@ git clone https://github.com/Zhou858979/aim_power_resume.git
 cd aim_power_resume
 ./install.sh
 ```
+
 ## 配置文件
 ```
 [virtual_sdcard]
@@ -39,4 +43,15 @@ start_gcode:
     M106 S{PLR.fan_speed}
     M220 S{PLR.move_speed_percent}
     M221 S{PLR.extrude_speed_percent}
+```
+
+## 文件结构
+
+```
+aim_power_resume/
+├── aim_power_resume.py                              # Shell file for loading .so
+├── aim_power_resume.cpython-310-aarch64-linux-gnu.so           # Compiled binary
+├── install.sh                                 # Deployment script
+├── setup.py                                   # Build script
+└── README.md                                  # This file
 ```
