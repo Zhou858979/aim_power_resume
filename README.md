@@ -8,6 +8,7 @@ Prebuilt `.so` binaries for ARM64 + Python 3.10.
 cd ~
 git clone https://github.com/Zhou858979/aim_power_resume.git
 cd aim_power_resume
+chmod 777 install.sh
 ./install.sh
 ```
 
